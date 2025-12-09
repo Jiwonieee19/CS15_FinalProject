@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import Image, ImageTk
-
 from DynamicFont import usingOurFont
 import subprocess
 import sys
