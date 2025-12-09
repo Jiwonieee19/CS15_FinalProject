@@ -1,0 +1,18 @@
+from tkinter import *
+from PIL import Image, ImageDraw, ImageFont, ImageTk
+import os
+
+
+def usingOurFont(text, textWidth, fontSize, fontColor):
+    # Create custom font image with PIL
+    font_path = os.path.abspath("reso/BalooTammudu-Regular.ttf")
+    custom_font = ImageFont.truetype(font_path, fontSize)
+
+    # Create image with text
+    text_img = Image.new('RGBA', (textWidth, fontSize+10), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(text_img)
+    draw.text((0, 0), text, font=custom_font, fill=fontColor)
+
+    # Convert to PhotoImage
+    text_photo = ImageTk.PhotoImage(text_img)
+    return text_photo
