@@ -8,10 +8,12 @@ import sys
 # windows = frame/panel
 # widgets = components(button,label,image)
 
-def open_second_file():
-    # Open the second Python file
+def openStartPy():
+    # Launch the next Python file
     subprocess.Popen([sys.executable, "Start.py"])
-    # Close the current window
+
+def closeThisPy():
+    # CLose the current window
     landingWindow.destroy()
 
 yellowPalette = "#CDAE00"
@@ -38,10 +40,10 @@ logoLabel = Label(landingWindow, image=landingLogo, bg=yellowPalette)
 logoLabel.place(relx=0.5, rely=0.3, anchor='center')
 
 text_photo = usingOurFont('"Where Noodles hug the Soul."', 340, 24, whitePalette)
-
 # Create label with the text image
 label = Label(landingWindow, image=text_photo, bg=yellowPalette)
 label.place(relx=0.5, rely=0.59, anchor='center')
 
-landingWindow.after(3000, open_second_file)
+landingWindow.after(2500, openStartPy)
+landingWindow.after(6000, closeThisPy)
 landingWindow.mainloop()
