@@ -92,7 +92,7 @@ buttonFrame1.place(relx=0.5, rely=0.83, anchor='center')
 
 # First button
 startButton = Button(buttonFrame1, image=English, bg=yellowPalette, borderwidth=0, highlightthickness=0)
-startButton.pack(side=LEFT, padx=10)   # spacing between buttons
+startButton.pack(side=LEFT, padx=10)
 
 # Second button
 optionButton = Button(buttonFrame1, image=Tagalog, bg=yellowPalette, borderwidth=0, highlightthickness=0)
